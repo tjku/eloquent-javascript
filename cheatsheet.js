@@ -44,3 +44,50 @@ undefined; null; // Empty values.
 undefined == null; // => true
 null == 0; // => false
 false == 0; // => true
+
+/****************************
+ *** 2. Program Structure ***
+ ****************************/
+
+// Expression is a fragment of code that produces a value.
+
+let myNumber = 123; // Binding.
+
+var oldWay; // Create a global variable (if defined outside a function) or a variable that is visible
+            // inside all the scope of the function (even before its definition).
+            // Do not use! Use `let` or `const` instead.
+
+globalVariable; // Even defined inside a function, its scope is global.
+
+if (true)
+  console.log('we can omit braces when we have only single statement');
+
+while (true) {
+  console.log('print once');
+  break;
+}
+
+do {
+  console.log('print once');
+while (false);
+
+for (let i = 0; i < 3; ++i) {
+  console.log(i);
+}
+
+let numbers = [1, 2, 3];
+
+for (let number of numbers) { // New way of iterating though array.
+  console.log(number);
+}
+
+switch (123 % 2) {
+  case 0:
+    console.log('value is even');
+    break; // Without `break` it would go to the next `case`.
+  case '1:
+    console.log('value is odd');
+    break;
+  default:
+    console.log('something went wrong');
+}
