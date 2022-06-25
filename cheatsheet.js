@@ -91,3 +91,38 @@ switch (123 % 2) {
   default:
     console.log('something went wrong');
 }
+
+/********************
+ *** 3. Functions ***
+ ********************/
+
+// Functions are visible in whole scope, even before their definition.
+
+// Function definition.
+const functionName = function(optionalArgument = 1) {
+  optionalArgument + 1;
+
+  // Lack of `return` gives value `undefined`.
+}; // Semicolon is required.
+
+// Function declaration.
+function functionName2() {
+  return; // `return` without an expression also returns `undefined`.
+} // Semicolon is not required.
+
+// Arrow function.
+const functionName3 = (x) => { return x * x; };
+
+functionName3(); // Omitted params are filled with `undefined` value.
+
+// When there is only one parameter name, you can omit the parentheses around the parameter list.
+// If the body is a single expression, rather than a block in braces, that expression will be returned from the function.
+const functionName4 = x => x * x;
+
+// Closure (pl. domknięcie).
+function multiplier(factor) {
+  return (number) => number * factor;
+}
+
+let twice = multiplier(2);
+twice(5); // => 10
