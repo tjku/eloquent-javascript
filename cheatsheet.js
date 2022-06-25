@@ -126,3 +126,57 @@ function multiplier(factor) {
 
 let twice = multiplier(2);
 twice(5); // => 10
+
+/**********************************************
+ *** 4. Data Structures: Objects and Arrays ***
+ **********************************************/
+
+let listOfNumbers = [1, 1, 2, 3, 5, 8];
+
+listOfNumbers.length == listOfNumbers["length"]; // Accessing a property could be done by dot or square brackets.
+
+// Properties that contain functions are generally called methods.
+
+let myObject = {
+  propertyOne: "value of propertyOne",
+  "property Two": "value or property Two"
+};
+
+myObject.propertyThree; // => undefined
+
+delete myObject.propertyOne; // Removed property from the object.
+
+"propertyOne" in myObject; // => false
+
+Object.keys(myObject); // => ["property Two"]
+
+// `Object.assign` copies all properties from one object into another.
+Object.assign(myObject, { "property Two": "overwritten value", newProperty: "value" });
+
+// Numbers, string, and booleans are immutable.
+// Objects and arrays are mutable (you can change their properties).
+
+const score = { visitors: 0, home: 0 };
+score.visitors = 1; // This is okay.
+score = { visitors: 1, home: 0 }; // This isn't allowed.
+
+let name = "value";
+{ name }; // A shorthand for `{ name: name }`.
+
+// Rest parameters.
+function max(...numbers) {
+  let result = -Infinity;
+  for (let number of numbers) {
+    if (number > result) result = number;
+  }
+  return result;
+}
+
+max(5, 1, 7); // => 7
+
+let numbers = [5, 1, 7];
+max(9, ...numbers, 8); // => 9
+
+// Destructuring.
+let [x, y, z] = [1, 2, 3, 4, 5]; // x => 1, y => 2, z => 3
+let { name } = { name: "John", age: 33 }; // name => "John"
