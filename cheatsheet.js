@@ -180,3 +180,7 @@ max(9, ...numbers, 8); // => 9
 // Destructuring.
 let [x, y, z] = [1, 2, 3, 4, 5]; // x => 1, y => 2, z => 3
 let { name } = { name: "John", age: 33 }; // name => "John"
+
+/*********************************
+ *** 5. Higher-Order Functions ***
+ *********************************/
