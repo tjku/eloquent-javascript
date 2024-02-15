@@ -333,3 +333,7 @@ let matrix = new SymmetricMatrix(5, (x, y) => `${x},${y}`);
 console.log(matrix.get(2, 3)); // => 3,2
 
 console.log(new SymmetricMatrix(2) instanceof SymmetricMatrix); // => true
+
+/***************************
+ *** 7. Project: A Robot ***
+ ***************************/
