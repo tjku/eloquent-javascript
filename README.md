@@ -1,4 +1,4 @@
-Eloquent JavaScript, 3rd Edition
+Eloquent JavaScript, 4rd Edition
 ================================
 
 https://eloquentjavascript.net/
